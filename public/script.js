@@ -9,12 +9,7 @@ const getCrafts = async() => {
 const showCrafts = async() => {
     const craftsJSON = await getCrafts();
     const craftsDIV = document.getElementById("crafts-div");
-/*
-    if(craftsJSON =="") {
-        craftsDIV.innerHTML = "Sorry, no crafts";
-        return;
-    }
-*/
+
     craftsJSON.forEach((craft) => {
         const column = document.createElement("column");
         craftsDIV.append(column);
