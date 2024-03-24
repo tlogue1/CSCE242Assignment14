@@ -12,7 +12,7 @@ app.get("/api/crafts",(req,res)=> {
     crafts[0] = {
         name: "Beaded jellyfish",
         image: "crafts/bead-jellyfish.jpg",
-        description: "Create a hanging jellyfish using eggcartons and multicolored beads",
+        description: "Create a hanging jellyfish using egg cartons and multicolored beads",
         supplies: [
             "string",
             "egg cartons",
@@ -20,7 +20,7 @@ app.get("/api/crafts",(req,res)=> {
             ]
     };
     crafts[1] = {
-        name: "Character Bookmakrs",
+        name: "Character Bookmarks",
         image: "crafts/bookmarks.jpeg",
         description: "Create a little birdy bookmark to always remind you where you were",
         supplies: [

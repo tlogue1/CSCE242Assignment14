@@ -17,16 +17,14 @@ const showCrafts = async() => {
     }
 
     craftsJSON.forEach((craft) => {
-        const section = document.createElement("section");
-        craftsDIV.append(section);
+        const column = document.createElement("column");
+        craftsDIV.append(column);
 
-        const h3 = document.createElement("h3");
-        h3.innerHTML = craft.name;
-        section.append(h3);
 
         const img = document.createElement("img");
         img.src = "http://localhost:3000/" + craft.image;
-        section.append(img);
+        column.append(img);
+        
 
         var modal = document.getElementById("myModal");
 
@@ -35,20 +33,21 @@ const showCrafts = async() => {
         var captionText = document.getElementsByClassName("caption");
         img.onclick = function (){
             modal.style.display= "block";
-            modalImg.src = "http://localhost:3000/" + craft.image;
+            modalImg.src = craft.image;
 
             var name = document.createElement("h1");
             name.innerHTML = craft.name;
             captionText[0].appendChild(name);
 
             var description = document.createElement("p");
-            description.innerHTML = "Description: " + craft.description;
+            description.innerHTML =  craft.description;
             captionText[0].appendChild(description);
 
-           
-            var supplies = document.createElement("ul");
-            supplies.innerHTML = "Supplies: " + craft.supplies;
+
+            var supplies = document.createElement("p");
+            supplies.innerHTML = "Supplies: " +  craft.supplies;
             captionText[0].appendChild(supplies);
+            
 
         }
         var span = document.getElementsByClassName("close")[0];
