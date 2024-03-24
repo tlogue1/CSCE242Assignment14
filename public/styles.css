@@ -40,13 +40,12 @@ p {
     z-index: 1; /* Sit on top */
     margin-top: 10%;
     padding-top: 100px; /* Location of the box */
-    left: 50%;
-    right: 50%;
-    top: 10%;
-    width: 80%; /* Full width */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
     max-width: 500px;
     overflow: auto; /* Enable scroll if needed */
-    height: auto;
+    height: 100%;
     background-color: white; /* Semi-transparant black */
   }
   
